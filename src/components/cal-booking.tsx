@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Button as MovingBorderButton } from "@/components/ui/moving-border"
 import { X, AlertCircle } from "lucide-react"
@@ -11,7 +11,7 @@ interface CalBookingProps {
   variant?: 'main' | 'sidebar'
 }
 
-export function CalBooking({ username, eventSlug, variant = 'sidebar' }: CalBookingProps) {
+export function CalBooking({ variant = 'sidebar' }: CalBookingProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
