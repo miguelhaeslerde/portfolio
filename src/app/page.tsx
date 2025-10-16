@@ -551,30 +551,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Reference Card 4 - Chatting-Software Hamburg */}
-              <div className="group relative">
-                <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 shadow-professional hover:shadow-professional-lg transition-all duration-300 hover:scale-[1.02] hover:border-primary/30">
-                  <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-3xl mb-6">
-                    💬
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4 text-foreground">Chatting-Software Hamburg</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Performance Marketing für eine B2B Chatting-Software aus Hamburg mit Fokus auf deutsche Unternehmen und Enterprise-Kunden.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">ROAS:</span>
-                      <span className="font-semibold text-primary">3.9x</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Lead Cost:</span>
-                      <span className="font-semibold text-primary">€38</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Reference Card 5 - FlexiUhr */}
+              {/* Reference Card 4 - FlexiUhr */}
               <div className="group relative">
                 <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 shadow-professional hover:shadow-professional-lg transition-all duration-300 hover:scale-[1.02] hover:border-primary/30">
                   <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-3xl mb-6">
@@ -597,7 +574,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Reference Card 6 - The Advertising Collective */}
+              {/* Reference Card 5 - The Advertising Collective */}
               <div className="group relative">
                 <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 shadow-professional hover:shadow-professional-lg transition-all duration-300 hover:scale-[1.02] hover:border-primary/30">
                   <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-3xl mb-6">

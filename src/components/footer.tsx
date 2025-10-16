@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-muted/30 border-t border-border/50">
       <div className="max-w-6xl mx-auto container-spacing py-16">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -21,38 +21,6 @@ export function Footer() {
               username="miguel-haesler" 
               eventSlug="erstgespraech" 
             />
-          </div>
-          
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold text-foreground mb-4">Services</h4>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>
-                <span className="hover:text-primary transition-colors cursor-pointer">
-                  Performance Marketing
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-primary transition-colors cursor-pointer">
-                  SaaS Marketing
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-primary transition-colors cursor-pointer">
-                  Mobile App Marketing
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-primary transition-colors cursor-pointer">
-                  E-Commerce Marketing
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-primary transition-colors cursor-pointer">
-                  Marketing Strategie
-                </span>
-              </li>
-            </ul>
           </div>
           
           {/* Legal */}
