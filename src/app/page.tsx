@@ -123,10 +123,23 @@ export default function Home() {
                 Es liegt nicht an dir
               </h2>
               
-              <p className="text-lg md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Dein Produkt ist nicht das Problem. Deine Idee ist nicht schlecht. 
-                <span className="text-red-500 font-semibold">Du</span> bist nicht der Grund, warum es nicht funktioniert.
-              </p>
+              <div className="text-lg md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed space-y-6">
+                <p>
+                  Um in der heutigen Zeit eine eigene Anwendung komplett erfolgreich auf den Markt zu bringen, benötigt man neben Kreativität und Copywriting-Skills vor allem Fachwissen, welches dafür sorgt, dass man die persönliche Traumzielgruppe auf korrektem Wege adressieren kann.
+                </p>
+                
+                <p>
+                  Du kannst noch so gute und professionelle Videos und schöne Kampagnen haben, wenn du das Ganze nicht über 10.000€ Adspend pro Tag skalieren kannst, ohne, dass deine komplette Kampagne einbricht oder du nicht weißt, wie du deine spezielle App auf allen Plattformen gelaunched bekommst, ohne auf Grund deiner speziellen Nische oder deinem Anwendungsbereich gesperrt zu werden, <span className="text-red-500 font-semibold">bin ich dein Partner.</span>
+                </p>
+                
+                <p>
+                  Gesundheit, Steuern, große Geld-Claims und Erwachsenenindustrie – ich kenne alles und habe alles bereits mit hohen Adspends versehen.
+                </p>
+                
+                <p>
+                  Entsprechend kenne ich alle Wege und Möglichkeiten, damit wir auch dein Produkt am Markt launchen, ohne, dass dein Werbekonto gesperrt wird oder deine Kampagnen ab einem gewissen Punkt einen Bottleneck erfahren.
+                </p>
+              </div>
             </div>
             
             <div className="grid md:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
