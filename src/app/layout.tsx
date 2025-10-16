@@ -37,6 +37,14 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        
+        {/* Cookiebot Script */}
+        <script 
+          id="Cookiebot" 
+          src="https://consent.cookiebot.com/uc.js" 
+          data-cbid="4d46efc0-374c-47dc-a769-d5d0949dd818" 
+          type="text/javascript"
+        />
       </body>
     </html>
   );
