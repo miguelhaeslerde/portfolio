@@ -33,20 +33,18 @@ export const Vortex = (props: VortexProps) => {
   const baseRadius = props.baseRadius || 1;
   const rangeRadius = props.rangeRadius || 2;
   const baseHue = props.baseHue || 220;
-  const rangeHue = props.rangeHue || 100;
+  const rangeHue = 100;
   const noiseSteps = 3;
   const xOff = 0.00125;
   const yOff = 0.00125;
   const zOff = 0.0005;
   const backgroundColor = props.backgroundColor || "#000000";
   let tick = 0;
-  const noise3D = createNoise3D();
+  const noise3D = createNoise3D(Math.random);
   let particleProps = new Float32Array(particlePropsLength);
   const center: [number, number] = [0, 0];
 
-  const HALF_PI3: number = 0.5 * Math.PI;
   const TAU: number = 2 * Math.PI;
-  const TO_RAD: number = Math.PI / 180;
   const rand = (n: number): number => n * Math.random();
   const randRange = (n: number): number => n - rand(2 * n);
   const fadeInOut = (t: number, m: number): number => {
@@ -159,7 +157,9 @@ export const Vortex = (props: VortexProps) => {
     particleProps[i4] = vy;
     particleProps[i5] = life;
 
-    (checkBounds(x, y, canvas) || life > ttl) && initParticle(i);
+    if (checkBounds(x, y, canvas) || life > ttl) {
+      initParticle(i);
+    }
   };
 
   const drawParticle = (
@@ -176,7 +176,7 @@ export const Vortex = (props: VortexProps) => {
     ctx.save();
     ctx.lineCap = "round";
     ctx.lineWidth = radius;
-    ctx.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
+    ctx.strokeStyle = `hsla(${hue},60%,70%,${fadeInOut(life, ttl) * 0.3})`;
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.lineTo(x2, y2);
@@ -191,7 +191,7 @@ export const Vortex = (props: VortexProps) => {
 
   const resize = (
     canvas: HTMLCanvasElement,
-    ctx?: CanvasRenderingContext2D,
+    _ctx?: CanvasRenderingContext2D,
   ) => {
     const { innerWidth, innerHeight } = window;
 
@@ -207,13 +207,13 @@ export const Vortex = (props: VortexProps) => {
     ctx: CanvasRenderingContext2D,
   ) => {
     ctx.save();
-    ctx.filter = "blur(8px) brightness(200%)";
+    ctx.filter = "blur(12px) brightness(150%)";
     ctx.globalCompositeOperation = "lighter";
     ctx.drawImage(canvas, 0, 0);
     ctx.restore();
 
     ctx.save();
-    ctx.filter = "blur(4px) brightness(200%)";
+    ctx.filter = "blur(6px) brightness(120%)";
     ctx.globalCompositeOperation = "lighter";
     ctx.drawImage(canvas, 0, 0);
     ctx.restore();

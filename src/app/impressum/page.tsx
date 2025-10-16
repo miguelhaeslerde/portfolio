@@ -10,7 +10,7 @@ export default function Impressum() {
       <MobileNav />
       
       {/* Main Content */}
-      <div className="ml-0 md:ml-64">
+      <div className="ml-0 md:ml-72">
         <div className="py-20 px-4 md:px-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-8">

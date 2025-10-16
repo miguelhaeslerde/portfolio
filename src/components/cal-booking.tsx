@@ -1,9 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Button as MovingBorderButton } from "@/components/ui/moving-border"
 import { X, AlertCircle } from "lucide-react"
+import { createPortal } from "react-dom"
 
 interface CalBookingProps {
   username: string
@@ -15,6 +16,11 @@ export function CalBooking({ variant = 'sidebar' }: CalBookingProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
 
   const handleOpenModal = () => {
@@ -51,7 +57,7 @@ export function CalBooking({ variant = 'sidebar' }: CalBookingProps) {
           as="button"
           borderRadius="1.75rem"
           containerClassName="w-auto min-w-80 cursor-pointer"
-          className="bg-white dark:bg-slate-900 hover:bg-gray-100 dark:hover:bg-slate-800 text-black dark:text-white border-neutral-200 dark:border-slate-800 text-lg md:text-xl px-8 py-4 h-16 cursor-pointer transition-colors duration-200"
+          className="bg-background hover:bg-muted text-foreground border-border text-lg md:text-xl px-8 py-4 h-16 cursor-pointer transition-all duration-200 shadow-professional hover:shadow-professional-lg"
           onClick={handleOpenModal}
           disabled={loading}
         >
@@ -60,7 +66,7 @@ export function CalBooking({ variant = 'sidebar' }: CalBookingProps) {
       ) : (
         <Button
           onClick={handleOpenModal}
-          className="w-full"
+          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-professional hover:shadow-professional-lg transition-all duration-200"
           size="sm"
           disabled={loading}
         >
@@ -69,40 +75,40 @@ export function CalBooking({ variant = 'sidebar' }: CalBookingProps) {
       )}
 
 
-      {/* Popup Modal */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-background rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-hidden">
+      {/* Popup Modal - Rendered as Portal to avoid container constraints */}
+      {isOpen && mounted && createPortal(
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
+          <div className="bg-background rounded-2xl shadow-professional-lg max-w-6xl w-full max-h-[90vh] overflow-hidden border border-border/50">
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-border">
-              <h2 className="text-xl font-semibold">Termin vereinbaren</h2>
+            <div className="flex items-center justify-between p-6 border-b border-border/50 bg-muted/30">
+              <h2 className="text-2xl font-semibold text-foreground">Termin vereinbaren</h2>
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={handleCloseModal}
-                className="h-8 w-8"
+                className="h-10 w-10 hover:bg-muted/50 transition-colors"
               >
-                <X className="h-4 w-4" />
+                <X className="h-5 w-5" />
               </Button>
             </div>
             
             {/* Error Display */}
             {error && (
-              <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg mx-4 mt-4">
-                <div className="flex items-center space-x-2">
-                  <AlertCircle className="h-4 w-4 text-red-500" />
-                  <span className="text-sm text-red-700 dark:text-red-300">{error}</span>
+              <div className="p-6 bg-destructive/10 border border-destructive/20 rounded-xl mx-6 mt-6">
+                <div className="flex items-center space-x-3">
+                  <AlertCircle className="h-5 w-5 text-destructive" />
+                  <span className="text-sm text-destructive font-medium">{error}</span>
                 </div>
               </div>
             )}
             
             {/* Cal.com Embed */}
-            <div className="p-4 h-[calc(90vh-80px)] overflow-auto">
+            <div className="p-6 h-[calc(90vh-120px)] overflow-auto">
               {loading && (
                 <div className="flex items-center justify-center h-32">
                   <div className="text-center">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
-                    <p className="text-sm text-muted-foreground">Cal.com wird geladen...</p>
+                    <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary mx-auto mb-4"></div>
+                    <p className="text-muted-foreground font-medium">Cal.com wird geladen...</p>
                   </div>
                 </div>
               )}
@@ -113,7 +119,7 @@ export function CalBooking({ variant = 'sidebar' }: CalBookingProps) {
                 width="100%"
                 height="100%"
                 frameBorder="0"
-                className="rounded-lg"
+                className="rounded-xl shadow-professional"
                 title="Cal.com Booking"
                 onLoad={handleIframeLoad}
                 onError={handleIframeError}
@@ -121,7 +127,8 @@ export function CalBooking({ variant = 'sidebar' }: CalBookingProps) {
               />
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   )
