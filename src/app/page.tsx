@@ -451,38 +451,6 @@ export default function Home() {
                     🤖
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-foreground">Steuerbot</h3>
-                  
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">1. Problem</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Steuer-SaaS kämpfte mit hohen Customer Acquisition Costs und niedrigen Conversion Rates bei B2B-Kunden.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">2. Ziel</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Reduzierung der Lead-Kosten um 40% und Steigerung der B2B-Conversion um 60%.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">3. Resultat</h4>
-                      <p className="text-sm text-muted-foreground">
-                        ROAS von 3.8x und Lead Cost von nur €45 bei 65% höherer Conversion Rate.
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">ROAS:</span>
-                      <span className="font-semibold text-primary">3.8x</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Lead Cost:</span>
-                      <span className="font-semibold text-primary">€45</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -493,38 +461,6 @@ export default function Home() {
                     🍎
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-foreground">Fastic</h3>
-                  
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">1. Problem</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Health-App hatte hohe User Acquisition Costs und niedrige Retention Rates nach der ersten Woche.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">2. Ziel</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Senkung der CPI um 50% und Steigerung der 7-Tage-Retention auf über 70%.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-2">3. Resultat</h4>
-                      <p className="text-sm text-muted-foreground">
-                        CPI von nur €1.80 und Retention Rate von 72% durch optimierte Onboarding-Sequenz.
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">CPI:</span>
-                      <span className="font-semibold text-primary">€1.80</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Retention Rate:</span>
-                      <span className="font-semibold text-primary">72%</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -535,19 +471,6 @@ export default function Home() {
                     🌍
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-foreground">Go-Remote</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    B2B SaaS Marketing für eine Remote-Work-Plattform mit internationaler Zielgruppe und Enterprise-Fokus.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">ROAS:</span>
-                      <span className="font-semibold text-primary">4.5x</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Enterprise Leads:</span>
-                      <span className="font-semibold text-primary">150+</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -558,19 +481,6 @@ export default function Home() {
                     ⏰
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-foreground">FlexiUhr</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Performance Marketing für eine Zeiterfassungs-Software mit Fokus auf B2B-Kundenakquise und SaaS-Skalierung.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">ROAS:</span>
-                      <span className="font-semibold text-primary">4.1x</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">MRR Growth:</span>
-                      <span className="font-semibold text-primary">+180%</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
@@ -581,19 +491,6 @@ export default function Home() {
                     🎯
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-foreground">The Advertising Collective</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Performance Marketing für eine Marketing-Agentur mit Fokus auf Lead-Generierung und B2B-Kundenakquise.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">ROAS:</span>
-                      <span className="font-semibold text-primary">5.2x</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Lead Cost:</span>
-                      <span className="font-semibold text-primary">€25</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
